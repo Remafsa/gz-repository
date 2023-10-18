@@ -3,16 +3,19 @@ version: 2
 models:
 
     - name: sales
+      description: One line by product - all the columns and KPI related to product stock.
       tests:
         - unique:
             column_name: "(orders_id || '-' || products_id)"
             
       columns:
           - name: orders_id
+            description: PK - identifier of the products
             tests : 
             - not_null 
 
           - name: products_id
+            description: name of the model type
             tests : 
             - not_null 
 
