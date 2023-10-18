@@ -29,3 +29,10 @@ models:
             tests : 
             - not_null 
           - name: margin
+
+      
+    - name: orders
+      description: One line by product - all the columns and KPI related to product stock.
+      tests:
+       - unique:
+            column_name: "(orders_id || '-' || products_id)"
